@@ -1,4 +1,8 @@
 .home-page-logo {
   font-size: 30px;
-  font-style: sans-serif;
+}
+
+.home-page-logo a {
+  color: black;  /* This will apply to the <a> link inside <p> */
+  text-decoration: none;  /* Optional: removes underline */
 }
