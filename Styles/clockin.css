@@ -56,6 +56,7 @@ body{
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  cursor: pointer;
 }
 
 /* Hover effect for nav links */
