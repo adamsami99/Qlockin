@@ -58,7 +58,6 @@ body{
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
   cursor: pointer;
 }
-<<<<<<< HEAD
 .image-container {
   position: relative; /* Allows absolute positioning for the second image */
   margin-top: 80px;
@@ -74,7 +73,6 @@ body{
   bottom: 0px; /* Adjust this value to move the boss image down from the top */
   width: 300px; /* Keep the boss image at its normal size */
 }
-=======
 
 /* Hover effect for nav links */
 .nav-link:hover {
@@ -119,4 +117,3 @@ body{
 
 
 
->>>>>>> d5bd8ea94667deceeebe437834f573cebdcb51a6
