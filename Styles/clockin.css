@@ -19,6 +19,8 @@ body{
   width: 100%;
   background-color: rgb(220,241,220,100);
   padding: 10px 20px;
+  border-top: 6px solid black;
+  border-bottom: 6px solid black;
 }
 
 /* Styling for the nav-links container */
@@ -32,6 +34,6 @@ body{
 /* Styling for each nav-link and button */
 .nav-link, .nav-links button {
   margin: 0 20px;
-  color: white;
+  color: black;
   font-size: 18px;
 }
