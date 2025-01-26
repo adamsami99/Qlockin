@@ -38,3 +38,18 @@ body{
   color: black;
   font-size: 18px;
 }
+.image-container {
+  position: relative; /* Allows absolute positioning for the second image */
+  margin-top: 80px;
+}
+
+.calendar-image {
+  width: 100%; /* The calendar image takes the full width */
+}
+
+.boss-image {
+  position: absolute; /* Position the boss image above the calendar image */
+  left: -50px; /* Space between the left side of the page and the boss image */
+  bottom: 0px; /* Adjust this value to move the boss image down from the top */
+  width: 300px; /* Keep the boss image at its normal size */
+}
