@@ -6,3 +6,30 @@
   color: black;  /* This will apply to the <a> link inside <p> */
   text-decoration: none;  /* Optional: removes underline */
 }
+
+/* Styling for the entire navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+
+
+/* Styling for the nav-links container */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+/* Styling for each nav-link and button */
+.nav-link, .nav-links button {
+  margin: 0 20px;
+  color: white;
+  font-size: 18px;
+}
