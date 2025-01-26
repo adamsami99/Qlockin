@@ -1,8 +1,13 @@
+body{
+  background-color: rgb(220, 241, 220, 100);
+}
+
 .home-page-logo {
   font-size: 30px;
 }
 
 .home-page-logo a {
+<<<<<<< HEAD
   color: black;  /* This will apply to the <a> link inside <p> */
   text-decoration: none;  /* Optional: removes underline */
 }
@@ -33,3 +38,35 @@
   color: white;
   font-size: 18px;
 }
+=======
+  color: black; 
+  text-decoration: none;  
+  font-weight: bold;
+}
+
+.header {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+}
+
+.button-get-started {
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(220, 241, 220, 100);
+}
+
+h1{
+font-size: 40px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+>>>>>>> c7bc22f11b893b654cba5b89b5a2840e14a4dd21
