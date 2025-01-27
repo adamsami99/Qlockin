@@ -5,13 +5,16 @@ body{
 }
 
 .home-page-logo {
-  font-size: 30px;
-  margin: 0 20px;  /* Space out the links horizontally */
-  color: black;  /* Text color */
+  margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
   font-size: 25px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;
+}
+
+.home-page-logo img {
+  height: 100px;  /* Set the height for the image */
+  cursor: pointer;  /* Makes the image clickable */
 }
 
 .home-page-logo a {
@@ -35,14 +38,14 @@ body{
 }
 
 /* Styling for the nav-links container */
-.nav-links {
+.nav-links{
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   justify-content: flex-end;
 }
 
-.nav-link {
+.nav-link,  .clockin-p{
   margin: 0 20px;  /* Space out the links horizontally */
   color: black;  /* Text color */
   font-size: 20px;  /* Font size for the links */
@@ -60,8 +63,7 @@ body{
 }
 
 .calendar-image {
-  width: 100%; /* The calendar image takes the full width */
-  
+  width: 50%; /* The calendar image takes the full width */
 }
 
 .boss-image {
@@ -71,7 +73,7 @@ body{
 }
 
 /* Hover effect for nav links */
-.nav-link:hover {
+.nav-link:hover, .clockin-p:hover, .home-page-logo:hover {
   color: #4CAF50;  /* Change text color to match the button on hover */
   transform: translateY(-3px);  /* Lift the link on hover */
 }
@@ -117,6 +119,7 @@ body{
   width: 50%;
   height: 300px;
   margin-left: 25%;
+  margin-top: 150px;
   gap: 100px;
  
 }
@@ -125,9 +128,9 @@ body{
   max-width: 50%; /* Adjust the width of the text section */
 }
 
-.calculator-image {
+.description-image {
   max-width: 40%; /* Limit the image width */
-  height: auto; /* Maintain aspect ratio */
+  height: 200px; /* Maintain aspect ratio */
 }
 
 
