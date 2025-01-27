@@ -14,21 +14,10 @@ body{
   transition: all 0.3s ease;
 }
 
-.home-page-logo:hover{
-  color: #4CAF50;  /* Change text color to match the button on hover */
-  transform: translateY(-3px);
-}
-
 .home-page-logo a {
   color: black;  /* This will apply to the <a> link inside <p> */
   text-decoration: none;  /* Optional: removes underline */
 }
-
-.home-page-logo a:hover{
-  color: #4CAF50;  /* Change text color to match the button on hover */
-  transform: translateY(-3px);
-}
-
 
 /* Styling for the entire navbar */
 .navbar {
