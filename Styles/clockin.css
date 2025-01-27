@@ -1,12 +1,14 @@
 body{
   background-color: rgb(220, 241, 220, 100);
+  text-align: center;
+  margin: 0;
 }
 
 .home-page-logo {
   font-size: 30px;
   margin: 0 20px;  /* Space out the links horizontally */
   color: black;  /* Text color */
-  font-size: 30px;  /* Font size for the links */
+  font-size: 25px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;
@@ -34,11 +36,13 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 17px;
   background-color: rgb(220,241,220,100);
   padding: 30px 25px;
-  border-top: 6px solid black;
-  border-bottom: 6px solid black;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position:fixed;
+  z-index: 1000;
 }
 
 /* Styling for the nav-links container */
@@ -52,7 +56,7 @@ body{
 .nav-link {
   margin: 0 20px;  /* Space out the links horizontally */
   color: black;  /* Text color */
-  font-size: 30px;  /* Font size for the links */
+  font-size: 20px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
@@ -60,17 +64,20 @@ body{
 }
 .image-container {
   position: relative; /* Allows absolute positioning for the second image */
-  margin-top: 80px;
+  text-align: center; /* Center the calendar image horizontally */
+  margin-top: 250px; 
+  margin-bottom: 150px; 
+
 }
 
 .calendar-image {
   width: 100%; /* The calendar image takes the full width */
+  
 }
 
 .boss-image {
-  position: absolute; /* Position the boss image above the calendar image */
-  left: -50px; /* Space between the left side of the page and the boss image */
-  bottom: 0px; /* Adjust this value to move the boss image down from the top */
+  position: relative; /* Position the boss image above the calendar image */
+
   width: 300px; /* Keep the boss image at its normal size */
 }
 
@@ -86,12 +93,13 @@ body{
   border: none;  /* Remove default border */
   color: white;  /* White text */
   padding: 14px 32px;  /* Padding inside the button */
-  font-size: 30px;  /* Font size for button text */
+  font-size: 20px;  /* Font size for button text */
   font-weight: bold;  /* Bold text */
   border-radius: 50px;  /* Rounded corners for the button */
   cursor: pointer;  /* Pointer cursor on hover */
   transition: all 0.3s ease;  /* Smooth transition for button effects */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+  margin-right: 50px;
 }
 
 /* Hover effect for the button */
@@ -113,6 +121,25 @@ body{
   align-items: center;  /* Center items vertically */
 }
 
+.clockin-description-container {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  margin-left: 25%;
+  gap: 100px;
+ 
+}
+
+.text-content {
+  max-width: 50%; /* Adjust the width of the text section */
+}
+
+.calculator-image {
+  max-width: 40%; /* Limit the image width */
+  height: auto; /* Maintain aspect ratio */
+}
 
 
 
