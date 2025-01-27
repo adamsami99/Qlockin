@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(220, 241, 220, 100);
+    text-align: center;
+    margin: 0;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 17px;
+    background-color: rgb(220,241,220,100);
+    padding: 30px 25px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position:fixed;
+    z-index: 1000;
+  }
+
+  .home-page-logo {
+    margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
+    font-size: 25px;  /* Font size for the links */
+    font-weight: bold;  /* Make the text bold */
+    text-decoration: none;  /* Remove underline from links */
+    transition: all 0.3s ease;
+  }
+  
+  .home-page-logo img {
+    height: 100px;  /* Set the height for the image */
+    cursor: pointer;  /* Makes the image clickable */
+  }
+  
+  .home-page-logo a {
+    color: black;  /* This will apply to the <a> link inside <p> */
+    text-decoration: none;  /* Optional: removes underline */
+  }
+
+  .clockin-p{
+    margin-right:4% ;
+  }
+  
