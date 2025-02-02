@@ -1,42 +1,56 @@
 body{
-    background-color: rgb(220, 241, 220, 100);
-    text-align: center;
-    margin: 0;
-  }
+  background-color: rgb(220, 241, 220, 100);
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Ändrad från centerad flexbox */
+  align-items: center;
+  min-height: 100vh;
+}
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 17px;
-    background-color: rgb(220,241,220,100);
-    padding: 30px 25px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position:fixed;
-    z-index: 1000;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-height: 17px;
+  background-color: rgb(220,241,220,100);
+  padding: 30px 25px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position:fixed;
+  z-index: 1000;
+}
 
-  .home-page-logo {
-    margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
-    font-size: 25px;  /* Font size for the links */
-    font-weight: bold;  /* Make the text bold */
-    text-decoration: none;  /* Remove underline from links */
-    transition: all 0.3s ease;
-  }
-  
-  .home-page-logo img {
-    height: 100px;  /* Set the height for the image */
-    cursor: pointer;  /* Makes the image clickable */
-  }
-  
-  .home-page-logo a {
-    color: black;  /* This will apply to the <a> link inside <p> */
-    text-decoration: none;  /* Optional: removes underline */
-  }
+.home-page-logo {
+  margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
+  font-size: 25px;  /* Font size for the links */
+  font-weight: bold;  /* Make the text bold */
+  text-decoration: none;  /* Remove underline from links */
+  transition: all 0.3s ease;
+}
 
-  .clockin-p{
-    margin-right:4% ;
-  }
-  
+.home-page-logo img {
+  height: 100px;  /* Set the height for the image */
+  cursor: pointer;  /* Makes the image clickable */
+}
+
+.home-page-logo a {
+  color: black;  /* This will apply to the <a> link inside <p> */
+  text-decoration: none;  /* Optional: removes underline */
+}
+
+.clockin-p{
+  margin-right:4% ;
+}
+
+.signup-container {
+   display: flex;
+    justify-content: center;
+     align-items: center;
+      width: 100%;
+       height: 100%;
+       margin-top: 16%;
+} 
+
+.signup-frame { background-color: white; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; } .signup-frame h2 { margin-bottom: 20px; color: #333; } form { display: flex; flex-direction: column; gap: 10px; } input { padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5px; } .requirements { list-style: none; padding: 0; margin: 10px 0; text-align: left; color: #666; font-size: 12px; } .requirements li { margin-bottom: 5px; } .submit-button { background-color: #00a651; color: white; font-size: 14px; padding: 10px; border: none; border-radius: 5px; cursor: pointer; } .submit-button:hover { background-color: #007f43; } .social-login { margin-top: 20px; } .social-login p { margin: 10px 0; color: #666; } .social-icons { display: flex; justify-content: center; gap: 20px; } .facebook-icon, .apple-icon { width: 30px; height: 30px; background-color: #ccc; border-radius: 50%; } .facebook-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'); background-repeat: no-repeat; background-size: contain; background-position: center; } .apple-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'); background-repeat: no-repeat; background-size: contain; background-position: center; }

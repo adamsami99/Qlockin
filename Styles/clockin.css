@@ -133,4 +133,7 @@ body{
   height: 200px; /* Maintain aspect ratio */
 }
 
-
+.clockin-p a {
+  text-decoration: none; /* Tar bort understrykning */
+  color: black; /* Behåller textfärgen */
+}
