@@ -80,10 +80,10 @@ body{
 
 /* Style for the nav button */
 .nav-links button {
-  background-color: #4CAF50;  /* Green background */
+  background-color: #569358;  /* Green background */
   border: none;  /* Remove default border */
   color: white;  /* White text */
-  padding: 14px 32px;  /* Padding inside the button */
+   /* Padding inside the button */
   font-size: 20px;  /* Font size for button text */
   font-weight: bold;  /* Bold text */
   border-radius: 50px;  /* Rounded corners for the button */
@@ -132,7 +132,5 @@ body{
   max-width: 40%; /* Limit the image width */
   height: 200px; /* Maintain aspect ratio */
 }
-
-
 
 
