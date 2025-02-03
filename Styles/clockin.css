@@ -29,7 +29,7 @@ body{
   align-items: center;
   width: 100%;
   height: 17px;
-  background-color: rgb(128, 0 , 32);
+  background-color: white(128, 0 , 32);
   padding: 30px 25px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
