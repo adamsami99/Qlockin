@@ -28,12 +28,11 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 17px;
-  background-color: white(128, 0 , 32);
-  padding: 30px 25px;
+  background-color: white;
+  padding: 20px 40px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position:fixed;
+  position: fixed;
   z-index: 1000;
 }
 
@@ -45,15 +44,16 @@ body{
   justify-content: flex-end;
 }
 
-.nav-link,  .clockin-p{
+.nav-link, .clockin-p, .bottom-page{
   margin: 0 20px;  /* Space out the links horizontally */
   color: black;  /* Text color */
-  font-size: 20px;  /* Font size for the links */
+  font-size: 35px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
   cursor: pointer;
 }
+ 
 .image-container {
   position: relative; /* Allows absolute positioning for the second image */
   text-align: center; /* Center the calendar image horizontally */
@@ -63,39 +63,33 @@ body{
 }
 
 .calendar-image {
-  width: 50%; /* The calendar image takes the full width */
-}
-
-.boss-image {
-  position: relative; /* Position the boss image above the calendar image */
-
-  width: 300px; /* Keep the boss image at its normal size */
+  width: 90%; /* The calendar image takes the full width */
+  height: auto;
 }
 
 /* Hover effect for nav links */
 .nav-link:hover, .clockin-p:hover, .home-page-logo:hover {
-  color: #4CAF50;  /* Change text color to match the button on hover */
+  color: rgb(220, 241, 220, 100); /* Change text color to match the button on hover */
   transform: translateY(-3px);  /* Lift the link on hover */
 }
 
 /* Style for the nav button */
 .nav-links button {
-  background-color: #569358;  /* Green background */
+  background-color: rgb(122, 221, 122);
   border: none;  /* Remove default border */
   color: white;  /* White text */
-   /* Padding inside the button */
-  font-size: 20px;  /* Font size for button text */
+  font-size: 32px;  /* Font size for button text */
   font-weight: bold;  /* Bold text */
-  border-radius: 50px;  /* Rounded corners for the button */
+  border-radius: 20px;  /* Rounded corners for the button */
   cursor: pointer;  /* Pointer cursor on hover */
   transition: all 0.3s ease;  /* Smooth transition for button effects */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);  /* Subtle shadow */
-  margin-right: 50px;
+  margin: 50px;
+  padding: 20px;
 }
 
 /* Hover effect for the button */
 .nav-links button:hover {
-  background-color: rgb(212, 175, 55);  /* Darker green on hover */
   color: rgb(255, 255, 255);
   transform: translateY(-3px);  /* Lift the button on hover */
 }
@@ -114,26 +108,52 @@ body{
 
 .clockin-description-container {
   display: flex;
-  justify-content:space-between;
   align-items: center;
-  width: 50%;
-  height: 300px;
-  margin-left: 25%;
-  margin-top: 150px;
-  gap: 100px;
+  justify-content: space-between;
+  margin: 50px auto;
+  padding: 20px;
+  max-width: 1200px;
+  gap: 40px;
  
 }
 
 .text-content {
-  max-width: 50%; /* Adjust the width of the text section */
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.text-content h1 {
+  font-size: 62px;
+  color: #2D3436;
+  margin-bottom: 15px;
+}
+
+.text-content h2 {
+  font-size: 52px;
+  color: #34495E;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+.text-content p {
+  font-size: 42px;
+  color: #636E72;
+  line-height: 1.6;
 }
 
 .description-image {
-  max-width: 40%; /* Limit the image width */
-  height: 200px; /* Maintain aspect ratio */
+    flex: 1;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .clockin-p a {
   text-decoration: none; /* Tar bort understrykning */
   color: black; /* Behåller textfärgen */
 }
+
+
