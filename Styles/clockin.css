@@ -48,7 +48,7 @@ body{
 .nav-link,  .clockin-p{
   margin: 0 20px;  /* Space out the links horizontally */
   color: black;  /* Text color */
-  font-size: 20px;  /* Font size for the links */
+  font-size: 35px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
@@ -84,7 +84,7 @@ body{
   border: none;  /* Remove default border */
   color: white;  /* White text */
    /* Padding inside the button */
-  font-size: 20px;  /* Font size for button text */
+  font-size: 32px;  /* Font size for button text */
   font-weight: bold;  /* Bold text */
   border-radius: 50px;  /* Rounded corners for the button */
   cursor: pointer;  /* Pointer cursor on hover */
