@@ -15,25 +15,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Validera e-post med egen regex för att säkerställa korrekt format
         if (!isValidEmail(email)) {
-            showError("Vänligen ange en giltig e-postadress.");
+            showError("Please enter a valid email address.");
             isValid = false;
         }
 
         // Validera lösenord
         if (!validatePassword(password)) {
-            showError("Lösenordet måste vara 8-64 tecken långt och innehålla minst två typer av tecken.");
+            showError("Password must be at least 8 characters long and contain letters and numbers.");
             isValid = false;
         }
 
         // Kontrollera om lösenorden matchar
         if (password !== confirmPassword) {
-            showError("Lösenorden matchar inte.");
+            showError("Password does not match!");
             isValid = false;
         }
 
         // Om allt är rätt, skicka formuläret
         if (isValid) {
-            alert("Registrering lyckades!");
+            alert("Sign-In successful!");
             form.submit();
         }
     });
@@ -55,3 +55,54 @@ document.addEventListener("DOMContentLoaded", function () {
         form.insertBefore(errorMessage, form.firstChild);
     }
 });
+
+/*        if (isValid) {
+            // Skicka data till servern via fetch
+            const data = {
+                email: email,
+                password: password,
+            };
+
+            fetch("/verify-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+                .then(response => response.json())
+                .then(result => {
+                    if (result.success) {
+                        alert("Verifikationslänk skickad till din e-postadress.");
+                        form.reset(); // Återställ formuläret
+                    } else {
+                        showError(result.message);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    showError("Något gick fel. Försök igen.");
+                });
+        }
+    });
+
+    // Funktion för att validera e-postadress med regex
+    function isValidEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    }
+
+    // Funktion för att validera lösenord
+    function validatePassword(password) {
+        const lengthRequirement = password.length >= 8 && password.length <= 64;
+        const complexityRequirement = /[a-zA-Z]/.test(password) && /[0-9!@#$%^&*]/.test(password);
+        return lengthRequirement && complexityRequirement;
+    }
+
+    // Funktion för att visa felmeddelanden
+    function showError(message) {
+        errorMessage.textContent = message;
+        form.insertBefore(errorMessage, form.firstChild);
+    }
+});
+*/
