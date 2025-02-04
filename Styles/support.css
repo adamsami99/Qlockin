@@ -11,6 +11,18 @@ header {
   z-index: 1000;
 }
 
+.logo-container{
+  display: flex;
+  align-items: center; /* Align image and text vertically */
+  gap: 10px; /* Space between the image and text */
+}
+
+header img {
+  height: 100px;  /* Set the height for the image */
+  cursor: pointer; 
+  text-decoration: none;  /* Remove underline from links */
+}
+
 header a{
   margin: 0 20px;  /* Space out the links horizontally */
   color: rgb(122, 221, 122);  /* Text color */
@@ -19,15 +31,6 @@ header a{
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
   cursor: pointer;
-}
-
-header img {
-  height: 100px;  /* Set the height for the image */
-  cursor: pointer; 
-  font-size: 32px;  /* Font size for the links */
-  font-weight: bold;  /* Make the text bold */
-  text-decoration: none;  /* Remove underline from links */
-  transition: all 0.3s ease;
 }
 
 /* Main Heading */
