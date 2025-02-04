@@ -33,15 +33,20 @@ header a{
   cursor: pointer;
 }
 
-/* Main Heading */
-h1 {
+.search-section{
+  background: linear-gradient(to right, #17a76b, #49c87f); /* Green gradient */
   text-align: center;
-  margin-top: 20px;
-  font-size: 36px;
-  color: #333;
+  padding: 40px 20px; /* Adjust spacing */
+  border-radius: 0 0 30px 30px; /* Rounded bottom edges */
 }
 
-/* Search Bar */
+/* Title Styling */
+.search-section h1 {
+  font-size: 36px;
+  color: white;
+  margin-bottom: 20px;
+}
+
 .search-bar {
   display: flex;
   justify-content: center;
@@ -54,34 +59,12 @@ h1 {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.search-bar i {
-  color: #555;
-  margin-right: 8px;
-  font-size: 18px;
-}
-
 .search-bar input[type="text"] {
   padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
   outline: none;
   width: 100%;
-}
-
-.search-bar button {
-  padding: 8px 12px;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  border: 1px solid #007BFF;
-  border-left: none;
-}
-
-.search-bar button:hover {
-  background-color: #0056b3;
 }
 
 /* Support Container */
@@ -111,7 +94,7 @@ h1 {
 }
 
 .support-box h2 {
-  color: #007BFF;
+  color: #555;
   font-size: 24px;
   margin-bottom: 10px;
 }
@@ -125,7 +108,7 @@ h1 {
 /* Learn More Link */
 .support-box a {
   text-decoration: none;
-  color: #007BFF;
+  color: #17a76b;
   font-weight: bold;
   transition: color 0.3s;
 }
