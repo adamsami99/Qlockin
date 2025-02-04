@@ -5,16 +5,17 @@ body{
 }
 
 .home-page-logo {
-  margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
-  font-size: 32px;  /* Font size for the links */
+  margin: 0 10px;  /* Space out the links horizontally */  /* Text color */
+  font-size: 20px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;
 }
 
 .home-page-logo img {
-  height: 100px;  /* Set the height for the image */
+  height: 90px;  /* Set the height for the image */
   cursor: pointer;  /* Makes the image clickable */
+  
 }
 
 .home-page-logo a {
@@ -33,6 +34,7 @@ body{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   z-index: 1000;
+  max-height: 27px;
 }
 
 /* Styling for the nav-links container */
@@ -43,10 +45,10 @@ body{
   justify-content: flex-end;
 }
 
-.nav-link, .clockin-p, .bottom-page, .nav-link a{
+.nav-link, .clockin-p, .bottom-page, .nav-link a, .clockin-p a{
   margin: 0 20px;  /* Space out the links horizontally */
-  color: rgb(122, 221, 122);  /* Text color */
-  font-size: 35px;  /* Font size for the links */
+  color: rgb(46, 204, 135);  /* Text color */
+  font-size: 22px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;  /* Smooth transition for hover effects */
@@ -73,17 +75,16 @@ body{
 
 /* Style for the nav button */
 .nav-links button {
-  background-color: rgb(122, 221, 122);
+  background-color: rgb(46, 204, 135);
   border: none;  /* Remove default border */
   color: white;  /* White text */
-  font-size: 32px;  /* Font size for button text */
-  font-weight: bold;  /* Bold text */
-  border-radius: 20px;  /* Rounded corners for the button */
+  font-size: 22px;  /* Font size for button text */
+  font-weight: bold;  /* Bold text */  
   cursor: pointer;  /* Pointer cursor on hover */
   transition: all 0.3s ease;  /* Smooth transition for button effects */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);  /* Subtle shadow */
   margin: 50px;
-  padding: 20px;
+  padding: 10px;
 }
 
 /* Hover effect for the button */
@@ -148,12 +149,6 @@ body{
     object-fit: cover;
     border-radius: 8px;
 }
-
-.clockin-p a {
-  text-decoration: none; /* Tar bort understrykning */
-  color: rgb(122, 221, 122); 
-}
-
 
 
 
