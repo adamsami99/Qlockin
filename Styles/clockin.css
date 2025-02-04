@@ -6,7 +6,7 @@ body{
 
 .home-page-logo {
   margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
-  font-size: 25px;  /* Font size for the links */
+  font-size: 32px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
   transition: all 0.3s ease;
@@ -46,7 +46,7 @@ body{
 
 .nav-link, .clockin-p, .bottom-page{
   margin: 0 20px;  /* Space out the links horizontally */
-  color: black;  /* Text color */
+  color: rgb(122, 221, 122);  /* Text color */
   font-size: 35px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
@@ -69,7 +69,6 @@ body{
 
 /* Hover effect for nav links */
 .nav-link:hover, .clockin-p:hover, .home-page-logo:hover {
-  color: rgb(220, 241, 220, 100); /* Change text color to match the button on hover */
   transform: translateY(-3px);  /* Lift the link on hover */
 }
 
@@ -145,7 +144,7 @@ body{
 
 .description-image {
     flex: 1;
-    max-width: 400px;
+    max-width: 300px;
     height: auto;
     object-fit: cover;
     border-radius: 8px;
@@ -153,7 +152,9 @@ body{
 
 .clockin-p a {
   text-decoration: none; /* Tar bort understrykning */
-  color: black; /* Behåller textfärgen */
+  color: rgb(122, 221, 122); 
 }
+
+
 
 
