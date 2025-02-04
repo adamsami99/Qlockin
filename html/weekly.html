@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Header */ 
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            font-size: 14px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50px;
+            z-index: 10;
+        }
+
+        .logo {
+            color: #36b37e;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        .date-display {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .view-toggle {
+            background-color: white;
+            color: #36b37e;
+            border: 1px solid #36b37e;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .view-toggle.active {
+            background-color: #36b37e;
+            color: white;
+        }
+
+        /* Weekly Calendar */
+        .calendar-container {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            height: calc(100vh - 60px);
+        }
+
+        .calendar {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .calendar th, .calendar td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .calendar th {
+            background-color: #f8f8f8;
+        }
+
+        .time-column {
+            width: 60px;
+            text-align: center;
+            font-weight: bold;
+            background-color: #f8f8f8;
+        }
+
+        .time-slot {
+            height: 60px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 100%;
+            background-color: #fff;
+            border-right: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar-icon {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 50px;
+            cursor: pointer;
+        }
+
+        .sidebar-right {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 60px;
+            height: 100%;
+            background-color: #fff;
+            border-left: 1px solid #ddd;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="icon1.png" class="sidebar-icon">
+        <img src="icon2.png" class="sidebar-icon">
+        <img src="icon3.png" class="sidebar-icon">
+    </div>
+    <div class="sidebar-right">
+        <img src="icon4.png" class="sidebar-icon">
+        <img src="icon5.png" class="sidebar-icon">
+        <img src="icon6.png" class="sidebar-icon">
+    </div>
+
+    <header>
+        <div class="logo">TimeTree</div>
+        <div class="nav-controls">
+            <a href="monthly.html" class="view-toggle">Monthly</a>
+            <a href="weekly.html" class="view-toggle active">Weekly</a>
+        </div>
+    </header>
+
+    <div class="calendar-container">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th class="time-column">All-day</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Time slots -->
+                <script>
+                    for (let hour = 0; hour < 24; hour++) {
+                        document.write('<tr>');
+                        document.write('<td class="time-column">' + (hour === 0 ? "12 AM" : hour < 12 ? hour + " AM" : hour === 12 ? "12 PM" : (hour - 12) + " PM") + '</td>');
+                        for (let day = 0; day < 7; day++) {
+                            document.write('<td class="time-slot"></td>');
+                        }
+                        document.write('</tr>');
+                    }
+                </script>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
