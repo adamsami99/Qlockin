@@ -140,6 +140,27 @@
             align-items: center;
             padding-top: 20px;
         }
+
+        .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 15px; /* Avstånd mellan hamburger-menyn och logotypen */
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover-effekt */
+.hamburger-menu:hover span {
+    background-color: #36b37e;
+}
+        
     </style>
 </head>
 <body>
@@ -155,12 +176,18 @@
     </div>
 
     <header>
-        <div class="logo">TimeTree</div>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">ClockIn</div>
         <div class="nav-controls">
             <a href="monthly.html" class="view-toggle">Monthly</a>
             <a href="weekly.html" class="view-toggle active">Weekly</a>
         </div>
     </header>
+    
 
     <div class="calendar-container">
         <table class="calendar">
