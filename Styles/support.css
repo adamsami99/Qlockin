@@ -1,13 +1,33 @@
 /* Header Styling */
 header {
-  background-color: white;
-  color: black;
-  padding: 20px;
   display: flex;
-  justify-content: left;
-  font-size: 32px;
-  border-bottom: 2px solid rgb(122, 221, 122);
-  font-weight: bold;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: white;
+  padding: 20px 40px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header a{
+  margin: 0 20px;  /* Space out the links horizontally */
+  color: rgb(122, 221, 122);  /* Text color */
+  font-size: 35px;  /* Font size for the links */
+  font-weight: bold;  /* Make the text bold */
+  text-decoration: none;  /* Remove underline from links */
+  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+  cursor: pointer;
+}
+
+header img {
+  height: 100px;  /* Set the height for the image */
+  cursor: pointer; 
+  font-size: 32px;  /* Font size for the links */
+  font-weight: bold;  /* Make the text bold */
+  text-decoration: none;  /* Remove underline from links */
+  transition: all 0.3s ease;
 }
 
 /* Main Heading */
