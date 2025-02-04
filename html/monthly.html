@@ -67,18 +67,26 @@
       font-size: 14px;
     }
 
-    /* Stil för view-toggle knappar */
     .view-toggle {
-      background-color: white;
-      color: #36b37e;
-      border: 1px solid #36b37e;
-    }
+            background-color: white;
+            color: #36b37e;
+            border: 1px solid #36b37e;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            text-decoration: none;
+        }
 
-    /* Aktiv knapp */
-    .view-toggle.active {
-      background-color: #36b37e;
-      color: white;
-    }
+        .view-toggle.active {
+            background-color: #36b37e;
+            color: white ; 
+        }
+
+        .view-toggle a {
+    text-decoration: none; /* Tar bort understrykningen */
+    color: inherit; /* Ärver färgen från knappen */
+}
+
 
     /* Kalender */
     .calendar {
@@ -178,6 +186,7 @@
     .hamburger-menu:hover span {
       background-color: #36b37e;
     }
+
   </style>
 </head>
 <body>
@@ -204,8 +213,8 @@
       <button>Today</button>
       <div class="date-display">February, 2025</div>
       <!-- Monthly är aktiv från början -->
-      <button class="view-toggle active">Monthly</button>
-      <button class="view-toggle">Weekly</button>
+      <button  class="view-toggle active"><a href="../html/monthly.html">Monthly</a></button>
+      <button  class="view-toggle"><a href="../html/weekly.html">Weekly</a></button>
     </div>
   </header>
 
