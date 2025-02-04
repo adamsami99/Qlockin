@@ -53,6 +53,11 @@ body{
        margin-top: 16%;
 } 
 
+a {
+  text-decoration: none;
+  color:inherit;
+}
+
 .signup-frame { background-color: white; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; } 
 
 .signup-frame h2 { margin-bottom: 20px; color: #333; } 
