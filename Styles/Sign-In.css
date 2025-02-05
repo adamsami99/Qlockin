@@ -58,7 +58,7 @@ a {
   color:inherit;
 }
 
-.signup-frame { background-color: white; padding: 20px; width: 350px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; } 
+.signup-frame { background-color: white; padding: 20px; width: 350px; border-radius: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); text-align: center; height: 550px; } 
 
 .signup-frame h2 { margin-bottom: 20px; color: #333; } 
 
@@ -85,3 +85,31 @@ input { padding: 10px; font-size: 14px; border: 1px solid #ccc; border-radius: 5
 .facebook-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'); background-repeat: no-repeat; background-size: contain; background-position: center; } 
 
 .apple-icon { background-image: url('https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'); background-repeat: no-repeat; background-size: contain; background-position: center; }
+
+.forgot-password{
+  color: rgb(238, 25, 25);
+  margin: 3vh auto;
+}
+
+.signin-form {
+  margin: 3vh auto;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  width: 62%;
+  margin: auto;
+}
+
+.separator hr {
+  flex: 1;
+  border: none;
+  height: 1px;
+  background: rgb(224, 220, 220);
+  margin: 5vh 10px;
+}
+
+.separator span {
+  color: gray;
+}
