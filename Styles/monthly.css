@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: hidden; /* Förhindrar att body scrollar */
+  }
+
+  /* Header (navbar) */
+  header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 10; /* Säkerställ att headern är över sidopanelerna */
+  }
+
+  .logo {
+    color: #36b37e;
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-left: 10px;
+  }
+
+  /* Nav controls container */
+  .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center; /* Centrerar innehållet i mitten av headern */
+    flex-grow: 1; /* Gör så att denna sektion tar upp allt ledigt utrymme */
+  }
+
+  .date-display {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /* Basstil för knappar */
+  button {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .view-toggle {
+          background-color: white;
+          color: #36b37e;
+          border: 1px solid #36b37e;
+          padding: 6px 12px;
+          border-radius: 5px;
+          font-size: 14px;
+          text-decoration: none;
+      }
+
+      .view-toggle.active {
+          background-color: #36b37e;
+          color: white ; 
+      }
+
+      .view-toggle a {
+  text-decoration: none; /* Tar bort understrykningen */
+  color: inherit; /* Ärver färgen från knappen */
+}
+
+
+  /* Kalender */
+  .calendar {
+    width: calc(100% - 0px); /* Ta bort utrymme för båda sidopanelerna */
+    margin-top: 60px; /* Gör utrymme för headern */
+    border-collapse: collapse;
+    table-layout: fixed;
+    height: calc(100vh - 60px); /* Gör kalendern lika hög som fönstret */
+  }
+
+  .calendar th, .calendar td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    height: 80px;
+  }
+
+  .calendar th {
+    background-color: #f8f8f8;
+    font-weight: normal;
+  }
+
+  .prev-month, .next-month {
+    color: #ccc;
+  }
+
+  .sunday {
+    color: red;
+  }
+
+  /* Sidebar (vänster) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 5; /* Förhindrar att den täcker över andra element */
+  }
+
+  .sidebar-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    margin-top: 200px;
+  }
+
+  /* Ny Sidebar (höger) */
+  .sidebar-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 100%;
+    background-color: #fff;
+    border-left: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    z-index: 5; /* Förhindrar att den täcker över andra element */
+  }
+
+  .sidebar-icon-right {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    margin-top: 200px;
+  }
+
+  /* Hamburger-menu */
+  .hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 15px; /* Avstånd mellan hamburger-menyn och logotypen */
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 25px;       /* Bredd på varje streck */
+    height: 3px;       /* Höjd/tjocklek på varje streck */
+    background-color: #333; /* Färg på strecken, kan ändras */
+    margin: 4px 0;     /* Mellanrum mellan strecken */
+    transition: background-color 0.3s ease; /* Valfri övergångseffekt */
+  }
+
+  /* Exempel på hover-effekt (valfritt) */
+  .hamburger-menu:hover span {
+    background-color: #36b37e;
+  }
