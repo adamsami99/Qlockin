@@ -1,4 +1,8 @@
 /* Header Styling */
+body {
+  margin: 0;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -24,8 +28,8 @@ header img {
 }
 
 header a{
-  margin: 0 20px;  /* Space out the links horizontally */
-  color: rgb(122, 221, 122);  /* Text color */
+  margin: 0 20px 0 0;  /* Space out the links horizontally */
+  color: rgb(46, 204, 135);  /* Text color */
   font-size: 35px;  /* Font size for the links */
   font-weight: bold;  /* Make the text bold */
   text-decoration: none;  /* Remove underline from links */
@@ -34,17 +38,21 @@ header a{
 }
 
 .search-section{
-  background: linear-gradient(to right, #17a76b, #49c87f); /* Green gradient */
+  background-color: rgb(46, 204, 135);
   text-align: center;
-  padding: 40px 20px; /* Adjust spacing */
-  border-radius: 0 0 30px 30px; /* Rounded bottom edges */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 25vh; /* Anpassa till viewportens höjd */
+  padding: 5vh 5vw; /* Responsiv padding */
 }
 
 /* Title Styling */
 .search-section h1 {
   font-size: 36px;
   color: white;
-  margin-bottom: 20px;
+
 }
 
 .search-bar {
@@ -108,11 +116,11 @@ header a{
 /* Learn More Link */
 .support-box a {
   text-decoration: none;
-  color: #17a76b;
+  color: rgb(46, 204, 135);;
   font-weight: bold;
   transition: color 0.3s;
 }
 
 .support-box a:hover {
-  color: #0056b3;
+  color: rgb(46, 204, 135);
 }
