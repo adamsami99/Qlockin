@@ -5,35 +5,36 @@ body{
 }
 
 .home-page-logo {
-  margin: 0 10px;  /* Space out the links horizontally */  /* Text color */
-  font-size: 20px;  /* Font size for the links */
-  font-weight: bold;  /* Make the text bold */
-  text-decoration: none;  /* Remove underline from links */
+  margin: 0 1rem;  /* Use rem for spacing */
+  font-size: 1.25rem; /* Responsive text */
+  font-weight: bold;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .home-page-logo img {
-  height: 90px;  /* Set the height for the image */
-  cursor: pointer;  /* Makes the image clickable */
-  
+  height: 5rem; 
+  max-width: 100%; 
+  cursor: pointer;
 }
 
 .home-page-logo a {
-  text-decoration: none;  /* Optional: removes underline */
+  text-decoration: none;  
 }
 
+/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   background-color: white;
-  padding: 20px 40px;
+  padding: 1.25rem 2rem; /* Use rem for consistent spacing */
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
   z-index: 1000;
-  max-height: 27px;
+  max-height: 4rem;
 }
 
 .nav-links{
@@ -42,27 +43,23 @@ body{
   justify-content: flex-end;
 }
 
-.nav-link, .clockin-p, .bottom-page, .nav-link a, .clockin-p a{
-  margin: 0 20px;  /* Space out the links horizontally */
-  color: rgb(46, 204, 135, 1);  /* Text color */
-  font-size: 22px;  /* Font size for the links */
-  font-weight: bold;  /* Make the text bold */
-  text-decoration: none;  /* Remove underline from links */
-  transition: all 0.3s ease;  /* Smooth transition for hover effects */
+.nav-link, .clockin-p, .bottom-page, .nav-link a, .clockin-p a {
+  margin: 0 1.25rem;
+  color: rgb(46, 204, 135, 1);
+  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Scales with screen size */
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
  
+/* Image Container */
 .image-container {
-  position: relative; /* Allows absolute positioning for the second image */
-  text-align: center; /* Center the calendar image horizontally */
-  margin-top: 250px; 
-  margin-bottom: 150px; 
-
-}
-
-.calendar-image {
-  width: 90%; /* The calendar image takes the full width */
-  height: auto;
+  position: relative;
+  text-align: center;
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+  width: 100%;
 }
 
 /* Hover effect for nav links */
@@ -73,15 +70,15 @@ body{
 /* Style for the nav button */
 .nav-links button {
   background-color: rgb(46, 204, 135, 1);
-  border: none;  /* Remove default border */
-  color: white;  /* White text */
-  font-size: 22px;  /* Font size for button text */
-  font-weight: bold;  /* Bold text */  
-  cursor: pointer;  /* Pointer cursor on hover */
-  transition: all 0.3s ease;  /* Smooth transition for button effects */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);  /* Subtle shadow */
-  margin: 50px;
-  padding: 10px;
+  border: none;
+  color: white;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 2rem;
+  padding: 0.75rem 1.5rem;
 }
 
 /* Hover effect for the button */
@@ -104,47 +101,91 @@ body{
 
 .clockin-description-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  margin: 50px auto;
-  padding: 20px;
-  width: 55%;
-  gap: 40px;
- 
+  margin: 5vh auto;
+  padding: 1.5rem;
+  max-width: 90%;
+  gap: 2.5rem;
 }
 
 .text-content {
   flex: 1;
-  padding: 20px;
+  padding: 1.25rem;
   max-width: 600px;
   text-align: left;
 }
 
 .text-content h1 {
-  font-size: 62px;
+  font-size: clamp(2rem, 5vw, 3.875rem);
   color: #2D3436;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .text-content h2 {
-  font-size: 52px;
+  font-size: clamp(1.5rem, 4vw, 3.25rem);
   color: #34495E;
-  margin-bottom: 10px;
+  margin-bottom: 0.75rem;
   font-weight: normal;
 }
 
 .text-content p {
-  font-size: 42px;
+  font-size: clamp(1rem, 3vw, 2.625rem);
   color: #636E72;
   line-height: 1.6;
 }
 
 .description-image {
-    flex: 1;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 8px;
+  flex: 1;
+  max-width: 18.75rem;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    max-height: none;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  .clockin-description-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .image-container {
+    margin-top: 10vh;
+    margin-bottom: 5vh;
+  }
+
+  .calendar-image {
+    width: 95%;
+  }
+
+  .nav-links button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
 }
 
 
