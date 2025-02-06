@@ -1,12 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".signin-form"); // Updated to .signin-form
-    const emailInput = document.querySelector(".email-input"); // Updated to .email-input
-    const passwordInput = document.querySelector(".password-input"); // Updated to .password-input
+    const form = document.querySelector(".signin-form");
+    const emailInput = document.querySelector(".email-input");
+    const passwordInput = document.querySelector(".password-input");
+    const clearEmailBtn = document.querySelector(".clear-email");
+    const togglePasswordBtn = document.querySelector(".toggle-password");
     const errorMessage = document.createElement("p");
+
     errorMessage.style.color = "red";
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevents form from submitting immediately
+        event.preventDefault();
         let isValid = true;
         let email = emailInput.value.trim();
         let password = passwordInput.value;
@@ -23,29 +26,58 @@ document.addEventListener("DOMContentLoaded", function () {
             isValid = false;
         }
 
-        // If everything is valid, submit the form (you can modify this part to send a request to your server)
         if (isValid) {
             alert("Sign-In successful!");
             form.submit();
         }
     });
 
-    // Function to validate the email with regex
+    // Funktion för att visa/dölja rensningsknapp och ögonknapp
+    function toggleIcons() {
+        clearEmailBtn.style.display = emailInput.value.length > 0 ? "flex" : "none";
+        togglePasswordBtn.style.display = passwordInput.value.length > 0 ? "flex" : "none";
+    }
+
+    // Lyssnar på input och uppdaterar ikonernas synlighet
+    emailInput.addEventListener("input", toggleIcons);
+    passwordInput.addEventListener("input", toggleIcons);
+
+    // Dölj ikoner från start
+    clearEmailBtn.style.display = "none";
+    togglePasswordBtn.style.display = "none";
+
+    // Funktion för att validera e-post
     function isValidEmail(email) {
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         return emailRegex.test(email);
     }
 
-    // Function to validate password (at least 8 characters and contains letters & numbers)
+    // Funktion för att validera lösenord
     function validatePassword(password) {
         const lengthRequirement = password.length >= 8;
         const complexityRequirement = /[a-zA-Z]/.test(password) && /\d/.test(password);
         return lengthRequirement && complexityRequirement;
     }
 
-    // Function to show error messages
+    // Funktion för att visa felmeddelande
     function showError(message) {
         errorMessage.textContent = message;
         form.insertBefore(errorMessage, form.firstChild);
     }
+
+    // Funktion för att visa/dölja lösenord och rensa lösenord med Shift + klick
+    togglePasswordBtn.addEventListener("click", function (event) {
+        if (event.shiftKey) {
+            passwordInput.value = ""; // Rensa lösenord om Shift hålls nere
+            toggleIcons(); // Uppdatera ikonernas synlighet
+        } else {
+            passwordInput.type = passwordInput.type === "password" ? "text" : "password";
+        }
+    });
+
+    // Funktion för att rensa e-postfältet
+    clearEmailBtn.addEventListener("click", function () {
+        emailInput.value = "";
+        toggleIcons(); // Uppdatera ikonernas synlighet
+    });
 });
