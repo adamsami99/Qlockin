@@ -29,7 +29,8 @@ body{
   align-items: center;
   width: 100%;
   background-color: white;
-  padding: 1.25rem 2rem; /* Use rem for consistent spacing */
+  padding: 2.25rem 2rem; 
+  padding-left: 5rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -46,7 +47,7 @@ body{
 .nav-link, .clockin-p, .bottom-page, .nav-link a, .clockin-p a {
   margin: 0 1.25rem;
   color: rgb(46, 204, 135, 1);
-  font-size: clamp(1rem, 2.5vw, 1.5rem); /* Scales with screen size */
+  font-size: clamp(2rem, 2.5vw, 1.5rem); /* Scales with screen size */
   font-weight: bold;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -71,14 +72,15 @@ body{
 .nav-links button {
   background-color: rgb(46, 204, 135, 1);
   border: none;
+  border-radius: 0.5rem;
   color: white;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(2rem, 2.5vw, 1.5rem);
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  margin: 2rem;
-  padding: 0.75rem 1.5rem;
+  margin-right: 6rem;
+  padding: 2rem 1.5rem;
 }
 
 /* Hover effect for the button */
