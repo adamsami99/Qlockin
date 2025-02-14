@@ -1,6 +1,6 @@
 body{
   background-color: white;
-  text-align: center;
+  align-items: center;
   margin: 0;
 }
 
@@ -22,7 +22,6 @@ body{
   text-decoration: none;  
 }
 
-/* Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -44,7 +43,7 @@ body{
   justify-content: flex-end;
 }
 
-.nav-link, .clockin-p, .bottom-page, .nav-link a, .clockin-p a {
+.nav-link, .clockin-p, .nav-link a, .clockin-p a {
   margin: 0 1.25rem;
   color: rgb(46, 204, 135, 1);
   font-size: clamp(2rem, 2.5vw, 1.5rem); /* Scales with screen size */
@@ -53,17 +52,7 @@ body{
   transition: all 0.3s ease;
   cursor: pointer;
 }
- 
-/* Image Container */
-.image-container {
-  position: relative;
-  text-align: center;
-  margin-top: 15vh;
-  margin-bottom: 10vh;
-  width: 100%;
-}
 
-/* Hover effect for nav links */
 .nav-link:hover, .clockin-p:hover, .home-page-logo:hover {
   transform: translateY(-3px);  /* Lift the link on hover */
 }
@@ -86,12 +75,12 @@ body{
 /* Hover effect for the button */
 .nav-links button:hover {
   color: rgb(255, 255, 255);
-  transform: translateY(-3px);  /* Lift the button on hover */
+  transform: translateY(-5px);  /* Lift the button on hover */
 }
 
 /* Active state for the button (when clicked) */
 .nav-links button:active {
-  transform: translateY(1px);  /* Slightly push down when clicked */
+  transform: translateY(2px);  /* Slightly push down when clicked */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Reduced shadow on click */
 }
 
@@ -101,94 +90,74 @@ body{
   align-items: center;  /* Center items vertically */
 }
 
-.clockin-description-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin: 5vh auto;
-  padding: 1.5rem;
-  max-width: 90%;
-  gap: 2.5rem;
-}
-
 .text-content {
   flex: 1;
-  padding: 1.25rem;
+  padding: clamp(1rem, 2.5vw, 2rem);
   max-width: 600px;
   text-align: left;
+  font-family: "Inter", sans-serif;
 }
 
 .text-content h1 {
   font-size: clamp(2rem, 5vw, 3.875rem);
   color: #2D3436;
   margin-bottom: 1rem;
+  padding-top: 9rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .text-content h2 {
   font-size: clamp(1.5rem, 4vw, 3.25rem);
-  color: #34495E;
+  color: #2C3E50;
   margin-bottom: 0.75rem;
-  font-weight: normal;
+  font-weight: 500;
+  letter-spacing: -0.25px;
 }
 
 .text-content p {
   font-size: clamp(1rem, 3vw, 2.625rem);
-  color: #636E72;
-  line-height: 1.6;
+  color: 4A4A4A;
+  line-height: 1.75;
+  max-width: 60ch; /* Limits line length for better readability */
 }
 
-.description-image {
-  flex: 1;
-  max-width: 18.75rem;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
+.wrapping-statement .text-content {
+  max-width: 800px; 
+  padding: 2rem; 
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    max-height: none;
-  }
+.wrapping-statement{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1.25rem;
+  background-color: #F8F9FA;
+  width: 100%;
+}
 
-  .nav-links {
-    flex-direction: column;
-    align-items: center;
-    margin-top: 1rem;
-  }
+.wrapping-statement h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  color: #2D3436;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
 
-  .nav-link {
-    font-size: 1rem;
-    margin: 0.5rem 0;
-  }
-
-  .clockin-description-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .text-content {
-    text-align: center;
-  }
-
-  .image-container {
-    margin-top: 10vh;
-    margin-bottom: 5vh;
-  }
-
-  .calendar-image {
-    width: 95%;
-  }
-
-  .nav-links button {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
+.wrapping-statement p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #4A4A4A;
+  line-height: 1.75;
+  max-width: 60ch;
+  margin: 0 auto;
 }
 
 
 
+
+
+
+
+
+ 
+  
