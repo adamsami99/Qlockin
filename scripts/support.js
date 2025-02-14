@@ -14,10 +14,16 @@ searchInput.addEventListener("keyup", function () {
     const description = box.querySelector('p').textContent.toLowerCase();
 
     if (title.includes(query) || description.includes(query)) {
-      box.style.display = "block"; 
-    } else {
+      box.style.display = "flex";  // Ensures the flex layout remains
+      box.style.flexDirection = "column"; // Ensures proper structure
+      box.style.justifyContent = "space-between"; 
+  } else {
       box.style.display = "none";
-      }
+  }
     });
   });
 });
+
+
+
+

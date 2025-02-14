@@ -102,7 +102,6 @@ header a{
 }
 
 .support-box:hover {
-  transform: translateY(-0.5rem);
   box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.2);
 }
 
@@ -136,4 +135,9 @@ header a{
 .support-box a:hover {
   background-color: rgb(30, 170, 110);
   transform: scale(1.05);
+}
+
+.learn-more-btn{
+    position: relative;
+    overflow: hidden;
 }
