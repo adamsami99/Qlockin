@@ -4,149 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animated Green Clock</title>
-    <style>
-        /* Centering the clock */
-        .clock-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-            background: transparent;
-        }
-
-        /* Clock face */
-        .clock {
-            width: 70px;
-            height: 70px;
-            position: relative;
-            border-radius: 50%;
-        }
-
-        /* Hour markers (24 ticks) */
-        .tick {
-            position: absolute;
-            width: 2px;
-            height: 8px;
-            background: #0d4b2b;
-            top: 50%;
-            left: 50%;
-            transform-origin: center;
-        }
-
-        /* Generate 24 ticks dynamically */
-        .tick:nth-child(1)  { transform: translate(-50%, -50%) rotate(0deg) translateY(-55px); }
-        .tick:nth-child(2)  { transform: translate(-50%, -50%) rotate(15deg) translateY(-55px); }
-        .tick:nth-child(3)  { transform: translate(-50%, -50%) rotate(30deg) translateY(-55px); }
-        .tick:nth-child(4)  { transform: translate(-50%, -50%) rotate(45deg) translateY(-55px); }
-        .tick:nth-child(5)  { transform: translate(-50%, -50%) rotate(60deg) translateY(-55px); }
-        .tick:nth-child(6)  { transform: translate(-50%, -50%) rotate(75deg) translateY(-55px); }
-        .tick:nth-child(7)  { transform: translate(-50%, -50%) rotate(90deg) translateY(-55px); }
-        .tick:nth-child(8)  { transform: translate(-50%, -50%) rotate(105deg) translateY(-55px); }
-        .tick:nth-child(9)  { transform: translate(-50%, -50%) rotate(120deg) translateY(-55px); }
-        .tick:nth-child(10) { transform: translate(-50%, -50%) rotate(135deg) translateY(-55px); }
-        .tick:nth-child(11) { transform: translate(-50%, -50%) rotate(150deg) translateY(-55px); }
-        .tick:nth-child(12) { transform: translate(-50%, -50%) rotate(165deg) translateY(-55px); }
-        .tick:nth-child(13) { transform: translate(-50%, -50%) rotate(180deg) translateY(-55px); }
-        .tick:nth-child(14) { transform: translate(-50%, -50%) rotate(195deg) translateY(-55px); }
-        .tick:nth-child(15) { transform: translate(-50%, -50%) rotate(210deg) translateY(-55px); }
-        .tick:nth-child(16) { transform: translate(-50%, -50%) rotate(225deg) translateY(-55px); }
-        .tick:nth-child(17) { transform: translate(-50%, -50%) rotate(240deg) translateY(-55px); }
-        .tick:nth-child(18) { transform: translate(-50%, -50%) rotate(255deg) translateY(-55px); }
-        .tick:nth-child(19) { transform: translate(-50%, -50%) rotate(270deg) translateY(-55px); }
-        .tick:nth-child(20) { transform: translate(-50%, -50%) rotate(285deg) translateY(-55px); }
-        .tick:nth-child(21) { transform: translate(-50%, -50%) rotate(300deg) translateY(-55px); }
-        .tick:nth-child(22) { transform: translate(-50%, -50%) rotate(315deg) translateY(-55px); }
-        .tick:nth-child(23) { transform: translate(-50%, -50%) rotate(330deg) translateY(-55px); }
-        .tick:nth-child(24) { transform: translate(-50%, -50%) rotate(345deg) translateY(-55px); }
-
-        /* Clock hands */
-        .hand {
-            position: absolute;
-            bottom: 50%;
-            left: 50%;
-            transform-origin: bottom;
-            background: #0c502d;
-            border-radius: 5px;
-        }
-
-        /* Hour hand */
-        .hour {
-            width: 5px;
-            height: 30px;
-            transform: rotate(0deg);
-            animation: rotate-hour 43200s linear infinite; /* 12-hour rotation */
-        }
-
-        /* Minute hand */
-        .minute {
-            width: 4px;
-            height: 40px;
-            transform: rotate(0deg);
-            animation: rotate-minute 3600s linear infinite; /* 60-minute rotation */
-        }
-
-        /* Second hand */
-        .second {
-            width: 2px;
-            height: 50px;
-            background: #0a4d0a;
-            transform: rotate(0deg);
-            animation: rotate-second 60s linear infinite; /* 60-second rotation */
-        }
-
-        /* Animations */
-        @keyframes rotate-hour {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes rotate-minute {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        @keyframes rotate-second {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-    </style>
+    <link rel="stylesheet" href="../Styles/clock-logo.css">
 </head>
 <body>
 
-<div class="clock-container">
-    <div class="clock">
-        <!-- 24 small tick marks -->
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-        <div class="tick"></div>
-
-        <!-- Clock hands -->
-        <div class="hand hour"></div>
-        <div class="hand minute"></div>
-        <div class="hand second"></div>
+    <div class="clock-container">
+        <div class="clock">
+            <!-- 24 small tick marks -->
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+            <div class="tick"></div>
+    
+            <!-- Clock hands -->
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+        </div>
     </div>
-</div>
+    
+    </body>
+    <script>
+      window.onload = function() {
+    const hourHand = document.querySelector('.hour');
+    const minuteHand = document.querySelector('.minute');
+    const secondHand = document.querySelector('.second');
 
-</body>
-</html>
+    // Function to update the clock hands
+    function updateClock() {
+        // Get current time in Sweden
+        const now = new Date();
+        const swedenTime = new Date(now.toLocaleString('en-US', { timeZone: 'Europe/Stockholm' }));
+
+        const hours = swedenTime.getHours();
+        const minutes = swedenTime.getMinutes();
+        const seconds = swedenTime.getSeconds();
+
+        // Calculate degrees
+        const hourDeg = (hours % 12) * 30 + minutes * 0.5;
+        const minuteDeg = minutes * 6;
+        const secondDeg = seconds * 6;
+
+        // Apply rotations
+        hourHand.style.transform = `rotate(${hourDeg}deg)`;
+        minuteHand.style.transform = `rotate(${minuteDeg}deg)`;
+        secondHand.style.transform = `rotate(${secondDeg}deg)`;
+    }
+
+    // Initial update without transitions
+    hourHand.style.transition = 'none';
+    minuteHand.style.transition = 'none';
+    secondHand.style.transition = 'none';
+    updateClock();
+
+    // Apply smooth transitions for subsequent updates
+    setTimeout(() => {
+        hourHand.style.transition = 'transform 0.5s ease-in-out';
+        minuteHand.style.transition = 'transform 0.5s ease-in-out';
+        secondHand.style.transition = 'transform 0.5s ease-in-out';
+    }, 0);
+
+    // Update every second
+    setInterval(updateClock, 1000);
+};
+
+    </script>
+    </html>
