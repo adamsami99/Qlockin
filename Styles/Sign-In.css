@@ -1,4 +1,10 @@
 /* Mobile-first base styles */
+
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: rgb(220, 241, 220, 100);
   text-align: center;
@@ -331,12 +337,12 @@ input {
   }
 }
 
-/* Logo Clock Styling */
+/* Logo Clock Styling 
 .clock-logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px; /* Adjust as needed */
+  height: 50px; /* Adjust as needed 
   width: 50px;
 }
 
@@ -348,7 +354,7 @@ input {
      transition: all 0.3s ease; 
 }
 
-/* Small hour markers */
+
 .tick {
   position: absolute;
   width: 1px;
@@ -363,7 +369,7 @@ input {
   transform: translate(-50%, -50%) rotate(calc(15deg * (var(--i) - 1))) translateY(-20px); 
 }
 
-/* Clock hands */
+/* Clock hands 
 .hand {
   position: absolute;
   bottom: 50%;
@@ -389,7 +395,7 @@ input {
 }
 
 .log:hover{
-  transform: translateY(-3px);  /* Lift the link on hover */
+  transform: translateY(-3px);  /* Lift the link on hover 
   background-color: #0a4d0a;
 }
 
