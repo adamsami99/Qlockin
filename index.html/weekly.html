@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Calendar</title>
+    <link rel="stylesheet" href="../Styles/weekly.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="icon1.png" class="sidebar-icon">
+        <img src="icon2.png" class="sidebar-icon">
+        <img src="icon3.png" class="sidebar-icon">
+    </div>
+    <div class="sidebar-right">
+        <img src="icon4.png" class="sidebar-icon">
+        <img src="icon5.png" class="sidebar-icon">
+        <img src="icon6.png" class="sidebar-icon">
+    </div>
+
+    <header>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="logo">ClockIn</div>
+        <div class="nav-controls">
+            <a href="monthly.html" class="view-toggle">Monthly</a>
+            <a href="weekly.html" class="view-toggle active">Weekly</a>
+        </div>
+    </header>
+    
+
+    <div class="calendar-container">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th class="time-column">All-day</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Time slots -->
+                <script>
+                    for (let hour = 0; hour < 24; hour++) {
+                        document.write('<tr>');
+                        document.write('<td class="time-column">' + (hour === 0 ? "12 AM" : hour < 12 ? hour + " AM" : hour === 12 ? "12 PM" : (hour - 12) + " PM") + '</td>');
+                        for (let day = 0; day < 7; day++) {
+                            document.write('<td class="time-slot"></td>');
+                        }
+                        document.write('</tr>');
+                    }
+                </script>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
