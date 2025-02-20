@@ -20,7 +20,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-height: 15px;
+  min-height: 100px;
   background-color: rgb(220,241,220,100);
   padding: 20px 15px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -337,52 +337,6 @@ input {
   }
 }
 
-/* Logo Clock Styling 
-.clock-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px; /* Adjust as needed 
-  width: 50px;
-}
-
-.clock {
-  width: 40px;
-  height: 40px;
-  position: relative;
-  border-radius: 50%;
-     transition: all 0.3s ease; 
-}
-
-
-.tick {
-  position: absolute;
-  width: 1px;
-  height: 5px;
-  background: #0d4b2b;
-  top: 50%;
-  left: 50%;
-  transform-origin: center;
-}
-
-.tick:nth-child(n) { 
-  transform: translate(-50%, -50%) rotate(calc(15deg * (var(--i) - 1))) translateY(-20px); 
-}
-
-/* Clock hands 
-.hand {
-  position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom;
-  background: #0c502d;
-  border-radius: 5px;
-}
-
-.hour { width: 2px; height: 12px; }
-.minute { width: 2px; height: 18px; }
-.second { width: 1px; height: 20px; background: #0a4d0a; }
-
 .log {
   margin: 30px;
   height: 50px;
@@ -395,10 +349,6 @@ input {
 }
 
 .log:hover{
-  transform: translateY(-3px);  /* Lift the link on hover 
+  transform: translateY(-3px);
   background-color: #0a4d0a;
-}
-
-.clock:hover{
-   transform: translateY(-3px);  /* Lift the link on hover */
 }
