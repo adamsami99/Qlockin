@@ -27,7 +27,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 60px;
     z-index: 10;
 }
 
@@ -147,7 +147,7 @@ header {
 .hamburger-menu {
 display: inline-block;
 cursor: pointer;
-margin-right: 15px; /* Avstånd mellan hamburger-menyn och logotypen */
+margin-right: 4px; /* Avstånd mellan hamburger-menyn och logotypen */
 }
 
 .hamburger-menu span {
@@ -177,4 +177,21 @@ background-color: #36b37e;
 .half-hour:hover {
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.clock{
+    height: 50px ;
+    width: 50px ;
+    margin-right:15px ;
+    margin-left: 0;
+}
+
+.clock::after{
+    height: 5px;
+    width: 5px;
 }

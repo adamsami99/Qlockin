@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weekly Calendar</title>
+    <link rel="stylesheet" href="../Styles/clock-logo.css">
     <link rel="stylesheet" href="../Styles/weekly.css">
 </head>
 <body>
@@ -19,15 +20,36 @@
     </div>
 
     <header>
+        <a href="../html/Clockin.html"><div class="clock">
+            <!-- Clock hands -->
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+            <div class="hand second" data-second-hand></div>
+
+            <!-- Clock tick marks -->
+            <div class="tick long" style="transform: rotate(0deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(30deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(60deg) translateY(-25px);"></div>
+            <div class="tick long" style="transform: rotate(90deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(120deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(150deg) translateY(-25px);"></div>
+            <div class="tick long" style="transform: rotate(180deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(210deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(240deg) translateY(-25px);"></div>
+            <div class="tick long" style="transform: rotate(270deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(300deg) translateY(-25px);"></div>
+            <div class="tick" style="transform: rotate(330deg) translateY(-25px);"></div>
+        </div></a>
+
+       <div class="logo"> <a href="../html/Clockin.html">ClockIn</a></div>
+        <div class="nav-controls">
+            <a href="monthly.html" class="view-toggle">Monthly</a>
+            <a href="weekly.html" class="view-toggle active">Weekly</a>
+        </div>
         <div class="hamburger-menu">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <div class="logo">ClockIn</div>
-        <div class="nav-controls">
-            <a href="monthly.html" class="view-toggle">Monthly</a>
-            <a href="weekly.html" class="view-toggle active">Weekly</a>
         </div>
     </header>
     
@@ -62,6 +84,7 @@
                         document.write('</tr>');
                     }
                 </script>
+                <script src="../scripts/clock.js"></script>
             </tbody>
         </table>
     </div>
