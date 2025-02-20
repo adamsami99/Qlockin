@@ -8,40 +8,18 @@ body{
     min-height: 100vh;
   }
 
-.navbar {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-height: 17px;
+    height: 100px;
     background-color: rgb(220,241,220,100);
-    padding: 30px 25px;
+    padding: 20px 15px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position:fixed;
+    position: fixed;
     z-index: 1000;
-  }
-
-  .home-page-logo {
-    margin: 0 20px;  /* Space out the links horizontally */  /* Text color */
-    font-size: 25px;  /* Font size for the links */
-    font-weight: bold;  /* Make the text bold */
-    text-decoration: none;  /* Remove underline from links */
-    transition: all 0.3s ease;
-  }
-  
-  .home-page-logo img {
-    height: 100px;  /* Set the height for the image */
-    cursor: pointer;  /* Makes the image clickable */
-  }
-  
-  .home-page-logo a {
-    color: black;  /* This will apply to the <a> link inside <p> */
-    text-decoration: none;  /* Optional: removes underline */
-  }
-
-  .clockin-p{
-    margin-right:4% ;
   }
 
   .signup-container {
@@ -142,3 +120,23 @@ body{
           text-decoration: none;
           color:inherit;
         }
+
+        .log {
+          margin: 30px;
+          height: 50px;
+          width: 130px;
+          border-radius: 30px;
+          text-decoration: none;
+          background-color: green;
+          color: white;
+          transition: all 0.3s ease; 
+        
+        }
+        
+        .log:hover{
+          transform: translateY(-3px);
+          background-color: #0a4d0a;
+        }
+
+    
+     

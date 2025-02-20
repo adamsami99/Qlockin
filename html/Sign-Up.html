@@ -5,13 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Clockin</title>
     <link rel="stylesheet" href="../Styles/Sign-up.css">
+    <link rel="stylesheet" href="../Styles/clock-logo.css">
 </head>
 <body>
 
     <div class="navbar">
-    <a href="Clockin.html" class="home-page-logo">
-        <img src="../images/clockin-logo.png" alt="ClockIn Logo">
-    </a>    <p class="clockin-p"><a href="../html/Sign-In.html">Sign In</a></p>
+        <a href="../html/Clockin.html"><div class="clock">
+            <!-- Clock hands -->
+            <div class="hand hour" data-hour-hand></div>
+            <div class="hand minute" data-minute-hand></div>
+            <div class="hand second" data-second-hand></div>
+
+            <!-- Clock tick marks -->
+            <div class="tick long" style="transform: rotate(0deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(30deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(60deg) translateY(-40px);"></div>
+            <div class="tick long" style="transform: rotate(90deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(120deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(150deg) translateY(-40px);"></div>
+            <div class="tick long" style="transform: rotate(180deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(210deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(240deg) translateY(-40px);"></div>
+            <div class="tick long" style="transform: rotate(270deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(300deg) translateY(-40px);"></div>
+            <div class="tick" style="transform: rotate(330deg) translateY(-40px);"></div>
+        </div></a>
+   <a href="../html/Sign-In.html"><button class="log">Sign in</button></a>
 </div>
 <br>
 <div class="signup-container"> 
@@ -39,7 +58,7 @@
 </div>
 
 
-    <script src="../scripts/signUp.js">
-    </script>
+    <script src="../scripts/signUp.js"></script>
+    <script src="../scripts/clock.js"></script>
 </body>
 </html>
