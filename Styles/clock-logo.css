@@ -123,12 +123,12 @@ margin-top:250px;
 }
 
 .clock .number{
-    color: black;
     --rotation: 0;
     position: absolute;
     width: 100%;
     height: 100%;
     text-align: center;
+    color: black;
     transform: rotate(var(--rotation));
 
 }
@@ -160,10 +160,23 @@ margin-top:250px;
     z-index: 10;
 }
 
+.clock::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
 .clock .hand.second{
     width: 5px;
     height: 45%;
-    background-color: red;
+    background-color: black;
 }
 
 .clock .hand.minute{
@@ -178,15 +191,3 @@ margin-top:250px;
     background-color: black;
 }
 
-.clock::after {
-    content: '';
-    position: absolute;
-    background-color: black;
-    z-index: 11;
-    width: 15px;
-    height: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-}
