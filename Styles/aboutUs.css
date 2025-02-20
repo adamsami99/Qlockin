@@ -117,7 +117,7 @@ body{
 
 .text-content p {
   font-size: clamp(1rem, 3vw, 2.625rem);
-  color: 4A4A4A;
+  color: #4A4A4A;
   line-height: 1.75;
   max-width: 60ch; /* Limits line length for better readability */
 }

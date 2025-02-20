@@ -76,50 +76,68 @@ header a{
 /* Support Container */
 .support-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 20px;
-  max-width:90%;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Wider boxes */
+  gap: 2rem; /* Space between boxes */
+  padding: 4vh 5vw; /* Scales padding with screen size */
+  max-width: 80vw; /* Prevents boxes from becoming too wide */
+  margin: 0 auto; /* Centers content */
 }
 
 /* Support Box */
 .support-box {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 30px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border: 0.1rem solid #ddd;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30vw; /* Makes sure all boxes are same width */
+  height: 22vh; /* Consistent height */
+  max-width: 450px; /* Prevents boxes from getting too wide */
 }
 
 .support-box:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.6rem 1.6rem rgba(0, 0, 0, 0.2);
 }
 
 .support-box h2 {
-  color: #555;
-  font-size: 24px;
-  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.8rem; /* Scales based on root font size */
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
 
 .support-box p {
-  color: #555;
-  font-size: 14px;
-  margin-bottom: 15px;
+  color: #666;
+  font-size: 1.2rem; /* Adjusted for readability */
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
 }
 
 /* Learn More Link */
 .support-box a {
   text-decoration: none;
-  color: rgb(46, 204, 135, 1);
+  color: white;
+  background-color: rgb(46, 204, 135);
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
   font-weight: bold;
-  transition: color 0.3s;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+  display: inline-block;
 }
 
 .support-box a:hover {
-  color: rgb(46, 204, 135, 1);
+  background-color: rgb(30, 170, 110);
+  transform: scale(1.05);
+}
+
+.learn-more-btn{
+    position: relative;
+    overflow: hidden;
 }
