@@ -69,7 +69,7 @@ header a{
   border: 1px solid #ccc;
   border-radius: 50px;
   outline: none;
-  width: 100%; /* Make it responsive */
+  width: 100%;
   font-size: 24px;
 }
 

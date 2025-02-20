@@ -1,6 +1,6 @@
 //ensures the JavaScript runs only after the page has fully loaded. 
 document.addEventListener("DOMContentLoaded", function () {
-const searchInput = document.querySelector('.js-search-section');
+const searchInput = document.querySelector('.js-search-bar');
 const supportBoxes = document.querySelectorAll('.js-support-box');
 
 
