@@ -27,7 +27,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
+    height: 60px;
     z-index: 10;
 }
 
@@ -102,8 +102,9 @@ header {
 }
 
 .time-slot {
-    height: 60px;
+    height: calc(1.4 * 75px); /* Ökar höjden med 40% */
     border-bottom: 1px solid #ddd;
+  
 }
 
 /* Sidebar */
@@ -126,6 +127,7 @@ header {
     height: 30px;
     margin-bottom: 50px;
     cursor: pointer;
+    margin: auto;
 }
 
 .sidebar-right {
@@ -145,7 +147,7 @@ header {
 .hamburger-menu {
 display: inline-block;
 cursor: pointer;
-margin-right: 15px; /* Avstånd mellan hamburger-menyn och logotypen */
+margin-right: 4px; /* Avstånd mellan hamburger-menyn och logotypen */
 }
 
 .hamburger-menu span {
@@ -160,4 +162,36 @@ transition: background-color 0.3s ease;
 /* Hover-effekt */
 .hamburger-menu:hover span {
 background-color: #36b37e;
+}
+
+.half-hour {
+    height: 50%;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.half-hour:last-child {
+    border-bottom: none;
+}
+.half-hour:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.clock{
+    height: 50px ;
+    width: 50px ;
+    margin-right:15px ;
+    margin-left: 0;
+}
+
+.clock::after{
+    height: 5px;
+    width: 5px;
 }

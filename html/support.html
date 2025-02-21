@@ -4,14 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../Styles/support.css">
+        <link rel="stylesheet" href="../Styles/clock-logo.css">
   <title>Support</title>
 </head>
 
 <body>
 <header>
-  <div class="logo-container">
-  <img src="../images/clockin-logo.png" alt="ClockIn Logo">
-  <a href="../html/Clockin.html">ClockIn</a>
+  <a href="../html/Clockin.html"><div class="clock">
+    <!-- Clock hands -->
+    <div class="hand hour" data-hour-hand></div>
+    <div class="hand minute" data-minute-hand></div>
+    <div class="hand second" data-second-hand></div>
+
+    <!-- Clock tick marks -->
+    <div class="tick long" style="transform: rotate(0deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(30deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(60deg) translateY(-40px);"></div>
+    <div class="tick long" style="transform: rotate(90deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(120deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(150deg) translateY(-40px);"></div>
+    <div class="tick long" style="transform: rotate(180deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(210deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(240deg) translateY(-40px);"></div>
+    <div class="tick long" style="transform: rotate(270deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(300deg) translateY(-40px);"></div>
+    <div class="tick" style="transform: rotate(330deg) translateY(-40px);"></div>
+</div></a>
+  <a href="../html/Sign-In.html">ClockIn</a>
 </div>
 </header>
 
@@ -46,5 +65,7 @@
 </div>
 
 <script type="module" src="../scripts/support.js"></script>
+<script src="../scripts/clock.js"></script>
 </body>
 </html>
+
