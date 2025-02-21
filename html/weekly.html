@@ -69,24 +69,10 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Time slots -->
-                <script>
-                    for (let hour = 0; hour < 24; hour++) {
-                        document.write('<tr>');
-                        let formattedHour = (hour === 0 ? "12 AM" : hour < 12 ? hour + " AM" : hour === 12 ? "12 PM" : (hour - 12) + " PM");
-                        document.write('<td class="time-column">' + formattedHour + '</td>');
-                        for (let day = 0; day < 7; day++) {
-                            document.write('<td class="time-slot">');
-                            document.write('<div class="half-hour"></div>');
-                            document.write('<div class="half-hour"></div>');
-                            document.write('</td>');
-                        }
-                        document.write('</tr>');
-                    }
-                </script>
-                <script src="../scripts/clock.js"></script>
             </tbody>
         </table>
     </div>
+    <script src="../scripts/clock.js"></script>
+    <script src="../scripts/weekly.js"></script>
 </body>
 </html>

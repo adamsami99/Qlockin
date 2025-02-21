@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Schedule</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Center the table */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            background-color: #f8f8f8;
+            overflow: auto;
+            padding: 20px;
+        }
+
+        /* Container to allow scrolling */
+        .calendar-container {
+            width: 90%;
+            max-width: 1200px;
+            overflow-x: auto;
+            overflow-y: auto;
+            max-height: 90vh;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+
+        /* Style the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        /* Header row */
+        th {
+            background-color: #36b37e;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ddd;
+            position: sticky;
+            top: 0;
+        }
+
+        /* Time column */
+        .time-column {
+            width: 80px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #f0f0f0;
+            border-right: 1px solid #ddd;
+            position: sticky;
+            left: 0;
+            z-index: 2;
+        }
+
+        /* Time slots */
+        .time-slot {
+            height: 50px;
+            border: 1px solid #ddd;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Half-hour blocks inside time slots */
+        .half-hour {
+            height: 50%;
+            width: 100%;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .half-hour:last-child {
+            border-bottom: none;
+        }
+
+        /* Hover effect for interaction */
+        .half-hour:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="time-column">Time</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Generated rows (24 hours) -->
+                <!-- Each row contains a time label and 7 time slots -->
+                <!-- Each time slot has 2 half-hour divs -->
+
+                <tr>
+                    <td class="time-column">12 AM</td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                </tr>
+
+                <!-- Loop through 1 AM - 11 PM -->
+                <!-- Example for 1 AM - 5 AM -->
+                <tr>
+                    <td class="time-column">1 AM</td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                </tr>
+
+                <tr>
+                    <td class="time-column">2 AM</td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                </tr>
+
+                <!-- Repeat this structure for every hour up to 11 PM -->
+
+                <tr>
+                    <td class="time-column">11 PM</td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                    <td class="time-slot"><div class="half-hour"></div><div class="half-hour"></div></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
