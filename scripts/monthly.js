@@ -19,7 +19,6 @@
       ];
       
       const holidays = {
-<<<<<<< HEAD
         "12-31": "Nyårsafton",
         "01-01": "Nyårsdagen",
         "01-05": "Trettondagsafton",
@@ -35,11 +34,6 @@
         "12-24": "Julafton",
         "12-25": "Juldagen",
         "12-26": "Annandag jul",
-=======
-          "2025-01-01": "New Year's Day",
-          "2025-12-25": "Christmas Day",
-          "2025-11-27": "Thanksgiving"
->>>>>>> 0e67f3abb1d7389a093383cf1299b43a943e43e4
       };
       
       const calendarBody = document.querySelector(".calendar tbody");
@@ -127,7 +121,6 @@
         }
     }
     
-      
       prevMonthBtn.addEventListener("click", function () {
           currentMonth--;
           if (currentMonth < 0) {
