@@ -46,8 +46,11 @@
       let currentYear = new Date().getFullYear();
       
       function generateCalendar(month, year) {
+        currentMonth = month; // Ensure the global variable updates
+        currentYear = year; 
+
         calendarBody.innerHTML = "";
-        dateDisplay.textContent = `${monthNames[month]} ${year}`;
+        dateDisplay.textContent = `${monthNames[currentMonth]} ${currentYear}`;
     
         let firstDay = new Date(year, month, 1).getDay();
         firstDay = firstDay === 0 ? 6 : firstDay - 1; // Adjust so that the week starts on Monday
