@@ -68,14 +68,10 @@ header {
 
 /* Weekly Calendar */
 .calendar-container {
-    width: 92%;
     margin-top: 69px;
-    margin-left: 60px;
     display: flex;
-    flex-direction: column;
     overflow-y: auto;
-    height: calc(100vh - 60px);
-    
+    height: calc(100vh - 69px);
     
 }
 
@@ -98,26 +94,25 @@ header {
 }
 
 .time-column {
-    width: 60px;
+    padding: 0px;
+    max-width: 5px;
     text-align: center;
     font-weight: bold;
-    background-color: #f8f8f8;
+    
 }
 
 .time-slot {
-    position: relative;
     height: calc(1.4 * 75px); /* Ökar höjden med 40% */
     border-bottom: 1px solid #ddd;
   
 }
-
 
 /* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 4%;
+    width: 5px;
     height: 100%;
     background-color: #fff;
     border-right: 1px solid #ddd;
@@ -139,7 +134,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 4%;
+    width: 60px;
     height: 100%;
     background-color: #fff;
     border-left: 1px solid #ddd;
@@ -199,13 +194,4 @@ a{
 .clock::after{
     height: 5px;
     width: 5px;
-}
-
-.time-label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    font-size: 10px; /* Smaller text size */
-    font-weight: bold; /* Remove bold effect */ 
 }
