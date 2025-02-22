@@ -21,6 +21,12 @@ document.addEventListener("DOMContentLoaded", function () {
             let slot = document.createElement("td");
             slot.className = "time-slot";
 
+            if (day === 0) {
+                slot.innerHTML = `<span class="time-label">${formattedHour}</span>`;
+                slot.setAttribute("rowspan", "1"); // Make time span both half-hour divs
+            }
+
+
             // Add two half-hour divs
             let halfHour1 = document.createElement("div");
             let halfHour2 = document.createElement("div");
