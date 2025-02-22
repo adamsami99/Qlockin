@@ -44,6 +44,11 @@ header {
     gap: 10px;
     justify-content: center;
     flex-grow: 1;
+    position: absolute; /* Position the container absolutely */
+    left: 50%; /* Move to the horizontal center */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    top: 10px; /* Adjust vertical position as needed */
+    z-index: 10; 
 }
 
 .date-display {
@@ -72,7 +77,10 @@ header {
     display: flex;
     overflow-y: auto;
     height: calc(100vh - 69px);
-    
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
 }
 
 .calendar {
@@ -91,6 +99,14 @@ header {
 
 .calendar th {
     background-color: #f8f8f8;
+    
+}
+
+.calendar thead {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Ensure it's always visible */
+    z-index: 10;
 }
 
 .time-column {
@@ -104,7 +120,7 @@ header {
 .time-slot {
     height: calc(1.4 * 75px); /* Ökar höjden med 40% */
     border-bottom: 1px solid #ddd;
-  
+    position: relative;
 }
 
 /* Sidebar */
@@ -112,7 +128,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 5px;
+    width: 4%;
     height: 100%;
     background-color: #fff;
     border-right: 1px solid #ddd;
@@ -134,7 +150,7 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 60px;
+    width: 4%;
     height: 100%;
     background-color: #fff;
     border-left: 1px solid #ddd;
@@ -145,9 +161,8 @@ header {
 }
 
 .hamburger-menu {
-display: inline-block;
-cursor: pointer;
-margin-right: 4px; /* Avstånd mellan hamburger-menyn och logotypen */
+    margin-left: auto; /* Push the hamburger menu to the right */
+    margin-right: 20px; /* Add some spacing from the edge */
 }
 
 .hamburger-menu span {
@@ -194,4 +209,16 @@ a{
 .clock::after{
     height: 5px;
     width: 5px;
+}
+
+.time-label {
+    font-weight: bold; /* Make the numbers bold */
+    text-align: center; /* Center the numbers horizontally */
+    color: #333; /* Dark gray color for better readability */
+    position: absolute; /* Position the label absolutely */
+    top: 0; /* Align to the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    white-space: nowrap; /* Prevent text from wrapping */
+    z-index: 1; /* Ensure the label is above other content */
 }
