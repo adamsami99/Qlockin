@@ -11,15 +11,15 @@ body {
     background-color: #fff;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    overflow: hidden; /* Förhindrar att body scrollar */
+    flex-direction: column;
+    overflow: hidden;
   }
 
   /* Header (navbar) */
   header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
     background-color: #fff;
     border-bottom: 1px solid #ddd;
@@ -28,33 +28,33 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    height: 50px;
-    z-index: 10; /* Säkerställ att headern är över sidopanelerna */
+    height: 60px;
+    z-index: 10;
   }
 
   .logo {
-    color: #36b37e;
     font-size: 20px;
+    color: #36b37e;
     font-weight: bold;
-    white-space: nowrap;
     margin-left: 10px;
+    flex-shrink: 0;
   }
 
   /* Nav controls container */
   .nav-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
-    justify-content: center; /* Centrerar innehållet i mitten av headern */
-    flex-grow: 1; /* Gör så att denna sektion tar upp allt ledigt utrymme */
-  }
+    justify-content: center;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 8px;
+    }
 
   .date-display {
     font-size: 16px;
     font-weight: bold;
   }
 
-  /* Basstil för knappar */
   button {
     background-color: #f5f5f5;
     border: none;
@@ -86,24 +86,22 @@ body {
 
   /* Kalender */
   .calendar {
-    width: calc(100% - 0px); /* Ta bort utrymme för båda sidopanelerna */
-    margin-top: 60px; /* Gör utrymme för headern */
+    width: 100%; 
+    margin-top: 60px;
     border-collapse: collapse;
     table-layout: fixed;
-    height: calc(100vh - 60px); /* Gör kalendern lika hög som fönstret */
+    height: calc(100vh - 60px); 
   }
 
   .calendar th, .calendar td {
     border: 1px solid #ddd;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     font-size: 14px;
-    height: 80px;
   }
 
   .calendar th {
     background-color: #f8f8f8;
-    font-weight: normal;
   }
 
   .prev-month, .next-month {
@@ -112,7 +110,7 @@ body {
 
   /* Holiday styling */
 .holiday {
-  color: black; /* Default text color */
+  color: black; 
   font-weight: bold;
   text-align: center;
   border-radius: 5px;
@@ -138,12 +136,34 @@ body {
   color: red !important; /* Make text red */
 }
 
+.today-highlight {
+  background-color: #64b492 !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.today-highlight:hover {
+  background-color: #4a9374 !important;
+  transform: scale(1.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
   /* Sidebar (vänster) */
   .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 60px;
+    width: 4%;
     height: 100%;
     background-color: #fff;
     border-right: 1px solid #ddd;
@@ -159,7 +179,7 @@ body {
     height: 30px;
     margin-bottom: 50px;
     cursor: pointer;
-    margin-top: 200px;
+    margin: auto;
   }
 
   /* Ny Sidebar (höger) */
@@ -167,7 +187,7 @@ body {
     position: fixed;
     top: 0;
     right: 0;
-    width: 60px;
+    width: 4%;
     height: 100%;
     background-color: #fff;
     border-left: 1px solid #ddd;
@@ -195,14 +215,36 @@ body {
 
   .hamburger-menu span {
     display: block;
-    width: 25px;       /* Bredd på varje streck */
-    height: 3px;       /* Höjd/tjocklek på varje streck */
-    background-color: #333; /* Färg på strecken, kan ändras */
-    margin: 4px 0;     /* Mellanrum mellan strecken */
-    transition: background-color 0.3s ease; /* Valfri övergångseffekt */
-  }
+    width: 25px;     
+    height: 3px;       
+    background-color: #333; 
+    margin: 4px 0;    
+    transition: background-color 0.3s ease; 
 
-  /* Exempel på hover-effekt (valfritt) */
   .hamburger-menu:hover span {
     background-color: #36b37e;
   }
+
+  /* Responsive Fix */
+@media (max-width: 768px) {
+  header {
+    flex-wrap: nowrap;
+    height: auto;
+  }
+
+  .logo {
+    margin: 0 auto; /* Center the logo */
+    text-align: center;
+  }
+
+  .nav-controls {
+    width: 100%;
+    justify-content: center; /* Ensure it stays centered */
+    margin-top: 5px;
+  }
+}
+
+ 
+  
+
+

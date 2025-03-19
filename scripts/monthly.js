@@ -57,6 +57,11 @@
         let daysInMonth = new Date(year, month + 1, 0).getDate();
         let prevDays = new Date(year, month, 0).getDate();
     
+
+        let today = new Date();
+        let todayDate = today.getDate();
+        let isCurrentMonth = (today.getMonth() === month && today.getFullYear() === year);
+
         let day = 1;
         let nextDay = 1;
         let row = document.createElement("tr");
@@ -71,9 +76,21 @@
             } else {
                 cell.textContent = day;
                 cell.classList.add("current-month");
+
+                if (isCurrentMonth && day === todayDate) {
+                    let span = document.createElement("span");
+                    span.textContent = day;
+                    span.classList.add("today-highlight");
+                    cell.innerHTML = ""; // Clear previous content
+                    cell.appendChild(span);
+                } else {
+                    cell.textContent = day;
+                }
+
                 checkHoliday(cell, month, day, isSunday); // Call with MM-DD
                 day++;
             }
+            
             row.appendChild(cell);
         }
         calendarBody.appendChild(row);
@@ -90,6 +107,17 @@
                 } else {
                     cell.textContent = day;
                     cell.classList.add("current-month");
+
+                    if (isCurrentMonth && day === todayDate) {
+                        let span = document.createElement("span");
+                        span.textContent = day;
+                        span.classList.add("today-highlight");
+                        cell.innerHTML = ""; // Clear previous content
+                        cell.appendChild(span);
+                    } else {
+                        cell.textContent = day;
+                    }
+                    
                     checkHoliday(cell, month, day, isSunday); // Call with MM-DD
                     day++;
                 }
