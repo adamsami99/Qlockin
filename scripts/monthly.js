@@ -78,8 +78,13 @@
                 cell.classList.add("current-month");
 
                 if (isCurrentMonth && day === todayDate) {
-
-                    cell.classList.add("today-highlight");
+                    let span = document.createElement("span");
+                    span.textContent = day;
+                    span.classList.add("today-highlight");
+                    cell.innerHTML = ""; // Clear previous content
+                    cell.appendChild(span);
+                } else {
+                    cell.textContent = day;
                 }
 
                 checkHoliday(cell, month, day, isSunday); // Call with MM-DD
@@ -104,8 +109,13 @@
                     cell.classList.add("current-month");
 
                     if (isCurrentMonth && day === todayDate) {
-
-                        cell.classList.add("today-highlight");
+                        let span = document.createElement("span");
+                        span.textContent = day;
+                        span.classList.add("today-highlight");
+                        cell.innerHTML = ""; // Clear previous content
+                        cell.appendChild(span);
+                    } else {
+                        cell.textContent = day;
                     }
                     
                     checkHoliday(cell, month, day, isSunday); // Call with MM-DD
