@@ -1,0 +1,55 @@
+/* General Reset */
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar - Exactly the Same as in Sign In CSS */
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Align elements evenly */
+    align-items: center;
+    width: 100%;
+    min-height: 100px; /* Fixed height */
+    background-color: rgb(220, 241, 220, 100); /* Same color */
+    padding: 20px 15px; /* Same padding */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Space below navbar so content isn't hidden */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 120px; /* Same margin for both pages */
+  }
+  
+  /* Responsive Navbar */
+  @media screen and (min-width: 768px) {
+    .navbar {
+      height: 85px;
+      padding: 25px 20px;
+    }
+  
+    .container {
+      margin-top: 140px;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .navbar {
+      height: 90px;
+      padding: 30px 25px;
+    }
+  
+    .container {
+      margin-top: 150px;
+    }
+  }
+  
