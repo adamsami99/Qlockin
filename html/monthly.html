@@ -5,39 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendar</title>
   <link rel="stylesheet" href="../Styles/monthly.css">
-
 </head>
+
 <body>
+  <div class="main-content">
   <div class="sidebar">
     <img src="icon1.png" class="sidebar-icon">
     <img src="icon2.png" class="sidebar-icon">
     <img src="icon3.png" class="sidebar-icon">
   </div>
-  <!-- Ny Högersidebar -->
-  <div class="sidebar-right">
-    <img src="icon4.png" class="sidebar-icon-right">
-    <img src="icon5.png" class="sidebar-icon-right">
-    <img src="icon6.png" class="sidebar-icon-right">
-  </div>
 
-  <header>
-    <div class="hamburger-menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-    <div class="logo">ClockIn</div>
-    <div class="nav-controls">
-      <button class="today-btn">Today</button>
-      <button class="prev-month-btn">&larr;</button> <!-- Left Arrow -->
-      <button class="next-month-btn">&rarr;</button> <!-- Right Arrow -->
-      <div class="date-display"></div>
-      <!-- Monthly är aktiv från början -->
-      <button  class="view-toggle active"><a href="../html/monthly.html">Monthly</a></button>
-      <button  class="view-toggle"><a href="../html/weekly.html">Weekly</a></button>
-    </div>
-  </header>
-
+<div class="calendar-container">
   <table class="calendar">
     <thead>
       <tr>
@@ -62,8 +40,39 @@
       </tr>
     </tbody>
   </table>
+</div>
 
+  <!-- Ny Högersidebar -->
+  <div class="sidebar-right">
+    <img src="icon4.png" class="sidebar-icon-right">
+    <img src="icon5.png" class="sidebar-icon-right">
+    <img src="icon6.png" class="sidebar-icon-right">
+  </div>
+</div>
 
+  <header>
+    <div class="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="logo">ClockIn</div>
+    
+    <div class="nav-controls">
+      <div class="left-group">
+        <button class="today-btn">Today</button>
+        <button class="prev-month-btn">&larr;</button>
+        <button class="next-month-btn">&rarr;</button>
+      </div>
+      <div class="date-display"></div>
+      <div class="right-group">
+        <button class="view-toggle active"><a href="../html/monthly.html">Monthly</a></button>
+        <button class="view-toggle"><a href="../html/weekly.html">Weekly</a></button>
+      </div>
+    </div>
+  </header>
+
+  
 
   <script src="../scripts/monthly.js">
   </script>
