@@ -6,27 +6,13 @@
 
 
 body {
-  background-color: rgb(220, 241, 220, 100);
+  background-color: rgb(220, 241, 220);
   text-align: center;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  min-height: 100px;
-  background-color: rgb(220,241,220,100);
-  padding: 20px 15px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  z-index: 1000;
 }
 
 .signup-container {

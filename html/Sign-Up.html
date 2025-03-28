@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Clockin</title>
+    <link rel="stylesheet" href="../Styles/navbar.css">
     <link rel="stylesheet" href="../Styles/Sign-up.css">
     <link rel="stylesheet" href="../Styles/clock-logo.css">
 </head>
@@ -37,9 +38,11 @@
     <div class="signup-frame">
          <h2 class="signup-heading">Sign up</h2> 
          <form class="signup-form"> 
+            <div class="input-group">
             <input type="email" class="email-input" placeholder="Email Address" required> 
             <input type="password" class="password-input" placeholder="Password" required> 
             <input type="password" class="confirm-password-input" placeholder="Confirm password" required> 
+            </div>
             <ul class="requirements"> 
                 <li>8-64 characters</li> 
                 <li>A combination of two types: Letters, numbers, symbols</li> 
@@ -49,7 +52,9 @@
             <button type="submit" class="submit-button">Submit</button> 
         </form> 
         <div class="social-login"> 
-            <p>or</p> 
+            <div class="separator">
+                <hr> <span>or</span> <hr>
+            </div> 
             <div class="social-icons"> 
                 <div class="facebook-icon"></div> 
             </div> 
